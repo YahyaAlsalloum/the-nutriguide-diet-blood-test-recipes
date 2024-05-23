@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - the_nutriguide</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/the_nutriguide.styles.css" asp-append-version="true" />
+    <link href="~/lib/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="~/assets/css/nice-select.css">
+    <link rel="stylesheet" href="~/assets/css/flaticon.css">
+    <link rel="stylesheet" href="~/assets/css/gijgo.css">
+    <link rel="stylesheet" href="~/assets/css/animate.min.css">
+    <link rel="stylesheet" href="~/assets/css/slick.css">
+    <link rel="stylesheet" href="~/assets/css/slicknav.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light  border-bottom box-shadow mb-3 text-light" style="background-color:#C69774;">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index"><span style="color:#637E76;font-weight:bold">nutri</span>guide</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Recipes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Plog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Contact Us</a>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container text-light">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer style="background-color:#637E76;">
+        <div class="navbar navbar-default">
+            <div class="container">
+                <div class="row" style="display:flex;flex-direction:row;gap:4px;justify-content:center;margin-left:30%;margin-right:30%" >
+                    <div class="col-md-4 col-md-push-8" >
+                        <ul class="nav navbar-nav " style="display:flex;flex-direction:row;gap:4px;justify-content:center">
+                            <li><a href=# target="_blank"><i class="bi bi-facebook fw-bold"></i></a></li>
+                            <li><a href=# target="_blank"><i class="bi bi-instagram fw-bold"></i></a></li>
+                            <li><a href=# target="_blank"><i class="bi bi-snapchat fw-bold"></i></a></li>
+                        </ul>
+                    </div>
+                    <br />
+                    <div class="col-md-8 col-md-pull-4">
+                        <p class="navbar-text sc-center">
+                            © @DateTime.Now.Year - made with <i class="bi bi-heart"></i> by mohammad & nadeen
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
